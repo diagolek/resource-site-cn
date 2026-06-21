@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 | 稳定入口与页面说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #faf8f5;
+            color: #2d2a27;
+            line-height: 1.7;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fefdfb;
+            border-radius: 28px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+            padding: 2.8rem 2rem;
+        }
+
+        @media (min-width: 700px) {
+            .container {
+                padding: 3.8rem 3.5rem;
+            }
+        }
+
+        /* hero section */
+        .hero {
+            text-align: center;
+            margin-bottom: 2.8rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e8e0d6;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #1f1c18;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #5b5450;
+            max-width: 600px;
+            margin: 0 auto 0.3rem;
+        }
+
+        .hero .subnote {
+            font-size: 0.9rem;
+            color: #9a918b;
+            margin-top: 0.2rem;
+        }
+
+        /* section headings */
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-top: 2.4rem;
+            margin-bottom: 1rem;
+            color: #2d2a27;
+            border-left: 4px solid #cbb7a6;
+            padding-left: 0.9rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #3f3a35;
+        }
+
+        p {
+            margin-bottom: 1.1rem;
+        }
+
+        /* quote / callout box */
+        .callout {
+            background: #f3efe9;
+            border-radius: 18px;
+            padding: 1.4rem 1.6rem;
+            margin: 1.6rem 0;
+            border-left: 6px solid #b8a999;
+            font-style: normal;
+        }
+
+        .callout p {
+            margin-bottom: 0.3rem;
+        }
+
+        .callout strong {
+            color: #3b352e;
+        }
+
+        /* advantage list */
+        .advantage-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin: 1.2rem 0 1.8rem;
+        }
+
+        .advantage-item {
+            background: #f6f2ec;
+            border-radius: 16px;
+            padding: 1.2rem 1.5rem;
+        }
+
+        .advantage-item h3 {
+            margin-top: 0;
+            font-size: 1.05rem;
+            color: #3f3832;
+        }
+
+        .advantage-item p {
+            margin-bottom: 0.2rem;
+            color: #4d4640;
+        }
+
+        @media (min-width: 600px) {
+            .advantage-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.2rem;
+            }
+        }
+
+        /* faq summary */
+        .faq-block {
+            background: #f4f0eb;
+            border-radius: 20px;
+            padding: 1.4rem 1.6rem;
+            margin: 2rem 0 1.6rem;
+        }
+
+        .faq-block details {
+            margin-bottom: 0.6rem;
+        }
+
+        .faq-block summary {
+            font-weight: 500;
+            cursor: pointer;
+            padding: 0.3rem 0;
+            color: #3f3832;
+        }
+
+        .faq-block details[open] summary {
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-block .answer {
+            padding-left: 0.2rem;
+            color: #4d463f;
+            border-left: 3px solid #cfc1b2;
+            padding-left: 0.8rem;
+            margin: 0.2rem 0 0.8rem;
+        }
+
+        /* bottom link line */
+        .footer-links {
+            text-align: center;
+            margin-top: 3.2rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e2dbd2;
+            font-size: 0.95rem;
+            color: #7a726b;
+        }
+
+        .footer-links a {
+            color: #6b5f56;
+            text-decoration: none;
+            border-bottom: 1px dotted #b8aa9d;
+        }
+
+        .footer-links a:hover {
+            color: #2d2a27;
+            border-bottom: 1px solid #6b5f56;
+        }
+
+        a {
+            color: #6b5f56;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        a:hover {
+            border-bottom-color: #6b5f56;
+        }
+
+        .inline-link {
+            font-weight: 450;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e4ddd4;
+            margin: 2.2rem 0 0.6rem;
+        }
+
+        .small-meta {
+            font-size: 0.85rem;
+            color: #9e9289;
+            margin-top: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>爱游戏 · 稳定入口</h1>
+        <p>一个偏向生活气息的页面，聊聊我们为什么需要清晰、安静的入口，以及页面本身该有的说明。</p>
+        <div class="subnote">—— 基于日常使用场景的整理 ——</div>
+    </div>
+
+    <!-- 说明区：入口的意义 -->
+    <section>
+        <h2>从稳定入口说起</h2>
+        <p>平时打开网站，很多时候会被跳转、弹窗或者杂乱的链接打扰。好的入口应该像一扇可以轻轻推开的门，不发出噪音，也不会把你引向别处。<strong>爱游戏</strong> 这个站点，给人的第一印象就是它愿意保持一种克制：没有横幅广告堆叠，也没有诱导式的按钮——你看到的就是它想呈现的。</p>
+
+        <div class="callout">
+            <p><strong>一个小习惯：</strong> 如果你常去某个网站，不妨把它的链接放在一个安静的书签夹里。每次直接通过书签进入，而不是从搜索框或者第三方页面绕路——这样既省时间，也避免被无关内容干扰。</p>
+        </div>
+
+        <p>现在不少游戏或兴趣类的站点，页面越来越重，功能越加越多，反而让最核心的入口变得模糊。<strong>爱游戏</strong> 在这方面做得比较平衡：它不试图在第一屏塞满所有内容，而是留出空间，让访问者自己决定下一步。</p>
+    </section>
+
+    <!-- 优势区 -->
+    <section>
+        <h2>几个值得留意的特点</h2>
+        <div class="advantage-grid">
+            <div class="advantage-item">
+                <h3>页面结构清晰</h3>
+                <p>导航、内容、辅助信息分层明确，不会让你在一堆按钮里迷失。每个区块都有它存在的理由，而不是为了填充版面。</p>
+            </div>
+            <div class="advantage-item">
+                <h3>文字为主，不喧哗</h3>
+                <p>没有自动播放的视频或闪烁的动效。信息通过简洁的段落传递，更像一篇可以慢慢读的文章。</p>
+            </div>
+            <div class="advantage-item">
+                <h3>链接自然融入句子</h3>
+                <p>站内外的链接常常嵌入在正常的叙述中，既不突兀，也保留了上下文。比如下面这个句子：如果你想直接看看这个网站，可以试试 <a href="https://site-cn-i-game.com.cn" class="inline-link">爱游戏</a>，它就在那里，不打扰你。</p>
+            </div>
+            <div class="advantage-item">
+                <h3>适合日常浏览</h3>
+                <p>无论用手机还是电脑，页面排版都会自动适应，阅读体验比较一致。米白背景也让眼睛舒服一点，没有那么刺眼。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 说明区：关于页面的补充 -->
+    <section>
+        <h2>页面本身的说明</h2>
+        <p>这个介绍页不是官方文档，更像一个使用笔记。很多时候我们花太多时间在设计得花里胡哨的着陆页上，却忘了页面最本分的事情是传递信息。爱游戏的页面，反而让我想起早期那些干净的内容站——没有太多花招，但它尊重读者的注意力。</p>
+
+        <p>如果你已经在使用 <a href="https://site-cn-i-game.com.cn">爱游戏</a>，可能会注意到它的页面更新不频繁，但每次变化都比较实在。不会为了刷存在感而改版，也不会突然删掉你习惯的功能。这种稳定感，在如今的网络环境里，其实挺难得的。</p>
+
+        <div class="callout">
+            <p><strong>一个小提醒：</strong> 如果你第一次打开这个网站，不妨把几个主要页面都点开看看，了解它的大致布局。下次再来的时候就会有方向感，不会觉得陌生。</p>
+        </div>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+        <h2>FAQ 摘要</h2>
+        <div class="faq-block">
+            <details>
+                <summary>这个网站主要做什么？</summary>
+                <div class="answer">它围绕游戏和兴趣内容提供信息聚合与社区入口，页面风格偏向文字阅读，适合喜欢安静浏览的用户。</div>
+            </details>
+            <details>
+                <summary>需要注册才能看内容吗？</summary>
+                <div class="answer">大部分内容可以直接访问，不需要登录。部分互动功能可能需要注册账号，但注册流程很简单。</div>
+            </details>
+            <details>
+                <summary>手机上看效果怎么样？</summary>
+                <div class="answer">页面做了响应式设计，在手机浏览器上排版会自适应，文字和按钮大小也合适，基本不用双指缩放。</div>
+            </details>
+            <details>
+                <summary>有没有 app 版本？</summary>
+                <div class="answer">目前主要是网页版，但通过浏览器添加到主屏幕也能获得类似 app 的快捷体验。</div>
+            </details>
+        </div>
+        <p style="font-size:0.95rem; margin-top:0.3rem;">以上是基于日常使用总结的常见疑问，更详细的内容可以在站内帮助页面找到。</p>
+    </section>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+        <p>你可以通过 <a href="https://site-cn-i-game.com.cn">爱游戏</a> 访问主站 · 本页仅作介绍，不收集任何信息</p>
+        <div class="small-meta">页面版本 · 2025 · 基于实际体验撰写</div>
+    </div>
+
+</div>
+</body>
+</html>
