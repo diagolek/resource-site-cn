@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>雷火电竞 · 持续关注</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f2f6fb;
+      color: #1b2a3a;
+      line-height: 1.6;
+      padding: 0 20px;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 30px 0 50px;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      background: linear-gradient(145deg, #f0f7ff 0%, #dceaf5 100%);
+      border-radius: 48px 48px 36px 36px;
+      padding: 50px 32px 44px;
+      margin-bottom: 48px;
+      box-shadow: 0 12px 24px rgba(40, 80, 100, 0.08);
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 550;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      color: #10455f;
+    }
+
+    .hero h1 small {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #2f697b;
+      display: block;
+      margin-top: 10px;
+      letter-spacing: 0.01em;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 620px;
+      color: #1f4a5e;
+      margin-bottom: 28px;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      background: #b6d7e8;
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      color: #0b3b4a;
+      font-weight: 500;
+      border: 1px solid #89c2d9;
+    }
+
+    /* ===== cards grid ===== */
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin: 48px 0 24px;
+      color: #114f63;
+      border-left: 6px solid #3ba0b9;
+      padding-left: 20px;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 28px 22px;
+      box-shadow: 0 6px 14px rgba(0, 30, 40, 0.04);
+      transition: transform 0.2s, box-shadow 0.25s;
+      border: 1px solid #e1eef6;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(0, 50, 60, 0.07);
+      border-color: #b2d6e5;
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 540;
+      margin-bottom: 10px;
+      color: #0d4a5e;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card h3::before {
+      content: "◈";
+      color: #39a3b9;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #2f4858;
+      margin-bottom: 8px;
+    }
+
+    .card .meta {
+      font-size: 0.85rem;
+      color: #5f7e8c;
+      margin-top: 12px;
+      border-top: 1px dashed #cde0e9;
+      padding-top: 12px;
+    }
+
+    /* ===== feature list (说明区) ===== */
+    .explain-block {
+      background: #e8f2f8;
+      border-radius: 36px;
+      padding: 36px 32px;
+      margin: 44px 0 40px;
+      border: 1px solid #c1dbe9;
+    }
+
+    .explain-block h2 {
+      font-size: 1.5rem;
+      font-weight: 530;
+      margin-bottom: 24px;
+      color: #0d4d61;
+    }
+
+    .explain-block ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .explain-block li {
+      position: relative;
+      padding-left: 28px;
+      font-size: 1rem;
+      color: #1d4456;
+    }
+
+    .explain-block li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #319aad;
+      font-size: 1.3rem;
+    }
+
+    /* ===== FAQ 摘要 ===== */
+    .faq-summary {
+      margin: 48px 0 30px;
+    }
+
+    .faq-summary h2 {
+      font-size: 1.5rem;
+      font-weight: 530;
+      margin-bottom: 20px;
+      color: #114f63;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 18px 24px;
+      margin-bottom: 14px;
+      border: 1px solid #deecf3;
+    }
+
+    .faq-item .q {
+      font-weight: 560;
+      color: #0f465a;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-item .q::before {
+      content: "Q. ";
+      color: #248396;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+
+    .faq-item .a {
+      color: #2f5365;
+      font-size: 0.95rem;
+      padding-left: 26px;
+    }
+
+    /* ===== 底部链接 ===== */
+    .footer-links {
+      border-top: 1px solid #cbdde9;
+      padding: 32px 0 20px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .footer-links p {
+      font-size: 0.95rem;
+      color: #3e6a7a;
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: #1d687f;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .footer-links a:hover {
+      border-bottom-color: #3ba0b9;
+    }
+
+    .recall-note {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: #4b717f;
+    }
+
+    .recall-note a {
+      color: #1d687f;
+      font-weight: 500;
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 640px) {
+      body {
+        padding: 0 12px;
+      }
+
+      .hero {
+        padding: 36px 20px 32px;
+        border-radius: 32px;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero h1 small {
+        font-size: 1rem;
+      }
+
+      .grid-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .explain-block {
+        padding: 28px 18px;
+        border-radius: 28px;
+      }
+
+      .section-title {
+        font-size: 1.3rem;
+        margin-top: 36px;
+      }
+
+      .faq-item {
+        padding: 14px 18px;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>
+      再次回来，总有新内容
+      <small>收藏 · 常读 · 持续关注</small>
+    </h1>
+    <p>
+      不算初次照面，更像是老地方。每次打开，页面里的信息、界面、节奏都可能不一样——这是一种刻意的变化，让每次回访都有一点新鲜感。
+    </p>
+    <span class="tagline">⚡ 保留入口 · 随到随看</span>
+  </div>
+
+  <!-- 优势区：网格卡片 -->
+  <h2 class="section-title">为什么值得收藏这里</h2>
+  <div class="grid-cards">
+    <div class="card">
+      <h3>结构一直在变</h3>
+      <p>每次生成不套用固定模板，段落、卡片、标题顺序都会调整。你看到的这一版，下次可能又是另一个节奏。</p>
+      <div class="meta">差异而非复制</div>
+    </div>
+    <div class="card">
+      <h3>克制叙述</h3>
+      <p>不堆砌承诺，不制造紧迫。用平实的语言告诉你想知道的，剩下的由你自己判断。</p>
+      <div class="meta">真实 · 不夸张</div>
+    </div>
+    <div class="card">
+      <h3>蓝绿点缀</h3>
+      <p>以低饱和蓝、青、绿为视觉线索，卡片微阴影，呼吸感留白。阅读时眼睛不吃力。</p>
+      <div class="meta">舒适界面</div>
+    </div>
+    <div class="card">
+      <h3>移动优先</h3>
+      <p>小屏大屏都适配。你可以在手机上随手收藏，随时回看，排版不会散。</p>
+      <div class="meta">响应式网格</div>
+    </div>
+  </div>
+
+  <!-- 说明区 -->
+  <div class="explain-block">
+    <h2>关于持续关注这件事</h2>
+    <ul>
+      <li>收藏一个页面，很多时候不只是为了一个链接，而是希望有一个稳定的、可以回访的信息起点。这里就是这样一个地方。</li>
+      <li>每次访问，页面内容都会不同——从章节安排到措辞细节，都刻意避免完全重复。这让你每次打开，都能看到一点新的表达。</li>
+      <li>这不是一个静态介绍页，而是一个「活着的」入口。它不断微调，但核心方向不变：提供关于 <a href="https://zh-lhdj.com" style="color: #1d687f; text-decoration: underline; text-underline-offset: 3px;">雷火电竞</a> 的真实、克制的信息。</li>
+      <li>你可以把它加入浏览器书签，或者记在备忘录里。过一段时间再回来看，页面结构大概率已经变了，但调性还在。</li>
+    </ul>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-summary">
+    <h2>常见疑问 · 简短摘要</h2>
+    <div class="faq-item">
+      <div class="q">页面为什么每次都不同？</div>
+      <div class="a">这是有意设计。我们希望每次回访都有新鲜感，避免模板化复制。段落、卡片、标题、视觉细节都会发生变化。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">链接在哪？怎么找到「雷火电竞」？</div>
+      <div class="a">上方说明区已经嵌入了一个自然句子，包含了 <a href="https://zh-lhdj.com" style="color: #1d687f; text-decoration: underline; text-underline-offset: 2px;">雷火电竞</a> 的链接。点击即可前往。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">可以收藏这个页面吗？</div>
+      <div class="a">当然。把它加入浏览器书签，或者保存到笔记工具。因为内容会持续变化，每次回来都可能看到不一样的叙述。</div>
+    </div>
+  </div>
+
+  <!-- 底部链接 / 再次访问提示 -->
+  <div class="footer-links">
+    <p>如果你觉得这个页面有用，可以把它收藏起来。</p>
+    <p>下一次再打开，hero 区的措辞、卡片的顺序、FAQ 的条目都可能不一样——但核心入口始终是 <a href="https://zh-lhdj.com">雷火电竞</a>。</p>
+    <div class="recall-note">
+      ⏺ 常回常新 · 不套模板 · 自然叙述
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
